@@ -18,8 +18,13 @@ class MainViewController: UIViewController {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ScrollViewViewController") as? ScrollViewViewController else { return }
         
         navigationController?.pushViewController(vc, animated: true)
-        
-     
     }
+    
+    @IBAction func tableViewButtonTapped(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TableViewViewController") as? TableViewViewController else { return }
+                
+                navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
 }
